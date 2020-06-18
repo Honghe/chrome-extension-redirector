@@ -14,6 +14,11 @@ chrome.webRequest.onBeforeRequest.addListener(
       match = details.url.match(pattern);
       if (match) {
         redirectUrl = details.url.replace(pattern, to);
+         // decode
+         // for qq mail
+          console.log(redirectUrl);
+          redirectUrl = decodeURIComponent(redirectUrl);
+          console.log(redirectUrl);
         if (redirectUrl != details.url) {
           return {redirectUrl: redirectUrl};
         }

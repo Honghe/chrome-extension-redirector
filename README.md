@@ -51,3 +51,10 @@ To learn more about regular expressions, try the interactive tutorial at
 [RegexOne.com][1]. 
 
 [1]: http://regexone.com/ "RegexOne"
+
+### Example
+```
+# qq mail
+from: ^https:\/\/en\.mail\.qq\.com\/cgi-bin\/readtemplate\?(.*?)gourl=(.*?)&subtemplate(.*)
+to: $2
+```
